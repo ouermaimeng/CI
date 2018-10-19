@@ -1,0 +1,11 @@
+# .travis.yml
+language: node_js
+node_js:
+  - "8"
+cache:
+# 缓存node_modules Travis CI能够缓存node_modules文件夹：npm install仍将在每个构建上运行，并将更新/安装添加到您的package.json文件的任何新软件包
+directories:
+  - "node_modules"
+branchs:
+  only:
+  - master  #指定只有检测到master分支有变动时才执行任务
