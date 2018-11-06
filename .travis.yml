@@ -11,10 +11,10 @@ addons:
   ssh_known_hosts:
     - 107.182.188.188:12306
 script: 
-    - ssh root@107.182.188.188 -p 12306 -o StrictHostKeyChecking=no 'mkdir /usr/src/fdsfe'
+    - ssh root@107.182.188.188 -p 12306 -o StrictHostKeyChecking=no
 before_install:
   - openssl aes-256-cbc -K $encrypted_8257990658f4_key -iv $encrypted_8257990658f4_iv
-    -in id_rsa.enc -out ./id_rsa -d
+    -in id_rsa.enc -out ~/.ssh/id_rsa -d
 # after_success:
 # - chmod 600 ~/.ssh/id_rsa
 # - ssh test@107.182.188.188 -p 12306 -o StrictHostKeyChecking=no 'mkdir /usr/src/fdsfe'   #使用ssh连接服务器
