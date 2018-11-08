@@ -7,7 +7,10 @@ directories:
 branchs:
   only:
     - master
-sudo: enabled
+sudo: required
+env:
+  matrix:
+    - OS_TYPE=centos OS_VERSION=7
 addons:
   ssh_known_hosts: 107.182.188.188:12306
 script: true
