@@ -7,7 +7,7 @@ directories:
 branchs:
   only:
     - master
-sudo: false
+sudo: true
 script: "./deploy.sh"
 addons:
   ssh_known_hosts: 107.182.188.188:12306
