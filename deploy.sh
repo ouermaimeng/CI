@@ -3,4 +3,4 @@ set -e
 
 echo "shell test"
 
-ssh root@107.182.188.188 -p 12306 -v exit
+ssh travis@107.182.188.188 -p 12306 -v exit
