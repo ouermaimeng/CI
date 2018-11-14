@@ -10,10 +10,10 @@ branchs:
 sudo: true
 notifications:
   email: false
-script: chmod +x ./deploy.sh
-# deploy:
-#   provider: script
-#   script: bash ./deploy.sh
+script: true
+deploy:
+  provider: script
+  script: bash ./deploy.sh
 addons:
   ssh_known_hosts: 107.182.188.188:12306
 before_install:
