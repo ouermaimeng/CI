@@ -8,7 +8,7 @@ branchs:
   only:
     - master
 sudo: true
-script: chmod +x deploy.sh
+script: chmod +x "./deploy.sh"
 addons:
   ssh_known_hosts: 107.182.188.188:12306
 before_install:
