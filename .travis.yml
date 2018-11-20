@@ -13,7 +13,9 @@ notifications:
 script: true
 deploy:
   provider: script
-  script: bash ./deploy.sh
+  script: 
+    - ssh root@107.182.188.188 -p 12306 -o StrictHostKeyChecking=no
+    - bash ./deploy.sh
 addons:
   ssh_known_hosts: 107.182.188.188:12306
 before_install:
